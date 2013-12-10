@@ -29,8 +29,10 @@
 </table>
 
 <br>
-
-
 </div>
+<% if user_signed_in? %>
 <%= link_to 'Back', user_path(@user), class: "btn btn-default" %>
+<% else %>
+<%= link_to 'Back', new_user_session_path, class: "btn btn-default" %>
+<% end %>
 </div>
